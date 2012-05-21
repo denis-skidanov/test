@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <name>den_all/css/window.css</name>
+            </action>
+
+        </reference>
+    </default>
+    <adminhtml_system_config_edit>
+        <reference name="content">
+            <block type="awall/jsinit" name="den_all_jsinit" template="den_all/jsinit.phtml"></block>
+        </reference>
+    </adminhtml_system_config_edit>
+
+</layout>	

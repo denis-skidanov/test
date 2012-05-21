@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>sw_custom_price_ranges</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>GPU</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>filter products in layered navigation via price slider</summary>
+    <description>this module display a price slider in magento layered navigation by overriding it default behavior of price ranges.   </description>
+    <notes>Stable version</notes>
+    <authors><author><name>faisal abbas</name><user>faisalabbas</user><email>faisalabbas@karigar.co</email></author></authors>
+    <date>2012-03-21</date>
+    <time>08:13:56</time>
+    <contents><target name="magelocal"><dir name="karigar"><dir><dir name="Priceranges"><dir name="Block"><dir name="Layer"><dir name="Filter"><file name="Price.php" hash="263c786997c014682ce04cf9cdbbf2f6"/></dir></dir></dir><dir name="Model"><dir name="Layer"><dir name="Filter"><file name="Price.php" hash="e8af9ae584b3b282fb4348f59ebdc41b"/></dir></dir><dir name="Resource"><dir name="Layer"><dir name="Filter"><file name="Price.php" hash="d4dee920ad75206362e81b1eb7a07349"/></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="811ca8f98fe3fd5cbdcbc70dd89c7037"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="priceranges.xml" hash="793873b3160140e02a548636df1e30d0"/></dir><dir name="template"><dir name="priceranges"><dir><dir name="layer"><file name="price_filter.phtml" hash="9fde2d0ab54c21fd7625dc9e66fc364b"/></dir></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="js"><dir name="jquery"><file name="jquery-ui.js" hash="3a998aaa2a5034db7719572897737913"/><file name="jquery.js" hash="4eb1043e1d626f87a238ea8d042a1f0e"/></dir></dir><dir name="css"><dir name="jquery-ui"><dir><dir name="images"><file name="ui-bg_diagonals-thick_18_b81900_40x40.png" hash="95f9cceeb9d742dd3e917ec16ed754f8"/><file name="ui-bg_diagonals-thick_20_666666_40x40.png" hash="f040b255ca13e693da34ab33c7d6b554"/><file name="ui-bg_flat_10_000000_40x100.png" hash="c18cd01623c7fed23c80d53e2f5e7c78"/><file name="ui-bg_glass_100_f6f6f6_1x400.png" hash="5f1847175ba18c41322cb9cb0581e0fb"/><file name="ui-bg_glass_100_fdf5ce_1x400.png" hash="d26e8f463195a7b86f86b7d550cfc114"/><file name="ui-bg_glass_65_ffffff_1x400.png" hash="e5a8f32e28fd5c27bf0fed33c8a8b9b5"/><file name="ui-bg_gloss-wave_35_f6a828_500x100.png" hash="58d2cd501e01573cf537089c694ba899"/><file name="ui-bg_highlight-soft_100_eeeeee_1x100.png" hash="384c3f17709ba0f809b023b6e7b10b84"/><file name="ui-bg_highlight-soft_75_ffe45c_1x100.png" hash="b806658954cb4d16ade8977af737f486"/><file name="ui-icons_222222_256x240.png" hash="ebe6b6902a408fbf9cac6379a1477525"/><file name="ui-icons_228ef1_256x240.png" hash="79f41c0765e9ec18562b20b0801d748b"/><file name="ui-icons_ef8c08_256x240.png" hash="ef9a6ccfe3b14041928ddc708665b226"/><file name="ui-icons_ffd27a_256x240.png" hash="ab8c30acc0e3608fb79e01fccf832c70"/><file name="ui-icons_ffffff_256x240.png" hash="342bc03f6264c75d3f1d7f99e34295b9"/></dir></dir><file name="jquery-ui.css" hash="4f3c7f1905538475ef3c13b1f71d8a8f"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="karigar_priceranges.xml" hash="95641380d796f7c6f57c5e355af3031e"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.13</min><max>6.0.0</max></php></required></dependencies>
+</package>

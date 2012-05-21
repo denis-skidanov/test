@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><name>den_reviews/css/style.css</name></action>
+		</reference>
+	</default>
+    <reviews_admin_manage_reviews_index>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="reviews/manage_reviews" name="reviews" />
+        </reference>
+    </reviews_admin_manage_reviews_index>
+    <reviews_admin_manage_reviews_edit>
+   	    <update handle="editor" />
+	</reviews_admin_manage_reviews_edit>	
+    <reviews_admin_manage_reviews_new>
+   	    <update handle="editor" />
+	</reviews_admin_manage_reviews_new>		
+	<reviews_admin_manage_comment_index>
+        <reference name="content">
+            <block type="reviews/manage_comment" name="comment" />
+        </reference>
+    </reviews_admin_manage_comment_index>
+	<reviews_admin_manage_cat_index>
+        <reference name="content">
+            <block type="reviews/manage_cat" name="cat" />
+        </reference>
+    </reviews_admin_manage_cat_index>
+</layout>

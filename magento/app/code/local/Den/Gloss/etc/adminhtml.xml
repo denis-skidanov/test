@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<translate>
+		<modules>
+			<Den_Gloss>
+				<files>
+					<default>Den_Gloss.csv</default>
+				</files>
+			</Den_Gloss>
+		</modules>
+	</translate>
+
+	<menu>
+		<gloss module="gloss">
+			<title>Gloss</title>
+			<sort_order>71</sort_order>
+			<children>
+				<new module="gloss">
+					<title>Add Post</title>
+					<sort_order>0</sort_order>
+					<action>gloss_admin/manage_gloss/new</action>
+				</new>
+				<posts module="gloss">
+					<title>Posts</title>
+					<sort_order>10</sort_order>
+					<action>gloss_admin/manage_gloss/index</action>
+				</posts>
+				<comment module="gloss">
+					<title>Comments</title>
+					<sort_order>20</sort_order>
+					<action>gloss_admin/manage_comment</action>
+				</comment>
+				<cat module="gloss">
+					<title>Categories</title>
+					<sort_order>30</sort_order>
+					<action>gloss_admin/manage_cat</action>
+				</cat>
+				<settings translate="title" module="gloss">
+					<title>Settings</title>
+					<action>adminhtml/system_config/edit/section/gloss</action>
+					<sort_order>40</sort_order>
+				</settings>
+			</children>
+		</gloss>
+	</menu>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+					<gloss>
+						<title>Gloss</title>
+						<sort_order>70</sort_order>
+						<children>
+							<posts>
+								<title>Manage Posts</title>
+								<sort_order>0</sort_order>
+							</posts>
+							<comment>
+								<title>Manage Comments</title>
+								<sort_order>1</sort_order>
+							</comment>
+							<cat>
+								<title>Manage Categories</title>
+								<sort_order>2</sort_order>
+							</cat>
+						</children>
+					</gloss>
+					<system>
+						<children>
+							<config>
+								<children>
+									<gloss>
+										<title>aheadWorks Gloss Section</title>
+									</gloss>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+	<layout>
+		<updates>
+			<gloss>
+				<file>aw_gloss.xml</file>
+			</gloss>
+		</updates>
+	</layout>
+</config>

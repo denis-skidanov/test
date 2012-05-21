@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><name>den_gloss/css/style.css</name></action>
+		</reference>
+	</default>
+    <gloss_admin_manage_gloss_index>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="gloss/manage_gloss" name="gloss" />
+        </reference>
+    </gloss_admin_manage_gloss_index>
+    <gloss_admin_manage_gloss_edit>
+   	    <update handle="editor" />
+	</gloss_admin_manage_gloss_edit>	
+    <gloss_admin_manage_gloss_new>
+   	    <update handle="editor" />
+	</gloss_admin_manage_gloss_new>		
+	<gloss_admin_manage_comment_index>
+        <reference name="content">
+            <block type="gloss/manage_comment" name="comment" />
+        </reference>
+    </gloss_admin_manage_comment_index>
+	<gloss_admin_manage_cat_index>
+        <reference name="content">
+            <block type="gloss/manage_cat" name="cat" />
+        </reference>
+    </gloss_admin_manage_cat_index>
+</layout>

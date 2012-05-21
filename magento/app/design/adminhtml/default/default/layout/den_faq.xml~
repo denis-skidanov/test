@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><name>den_job/css/style.css</name></action>
+		</reference>
+	</default>
+    <job_admin_manage_job_index>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="job/manage_job" name="job" />
+        </reference>
+    </job_admin_manage_job_index>
+    <job_admin_manage_job_edit>
+   	    <update handle="editor" />
+	</job_admin_manage_job_edit>	
+    <job_admin_manage_job_new>
+   	    <update handle="editor" />
+	</job_admin_manage_job_new>		
+	<job_admin_manage_comment_index>
+        <reference name="content">
+            <block type="job/manage_comment" name="comment" />
+        </reference>
+    </job_admin_manage_comment_index>
+	<job_admin_manage_cat_index>
+        <reference name="content">
+            <block type="job/manage_cat" name="cat" />
+        </reference>
+    </job_admin_manage_cat_index>
+</layout>

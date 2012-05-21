@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2004-2007 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="footer_links">
+            <block type="gloss/gloss" name="add.gloss.footer">
+                <block type="gloss/tags" name="gloss_tags" />
+                <action method="addFooterLink" ifconfig="gloss/menu/footer"></action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="gloss/gloss" name="right.gloss.menu" before="-">
+                <action method="setTemplate" ifconfig="gloss/menu/right" ifvalue="1">
+                    <template>den_gloss/menu.phtml</template> 
+                </action>
+                <block type="gloss/tags" name="gloss_tags" />
+            </block>
+        </reference>
+        <reference name="left">
+            <block type="gloss/gloss" name="left.gloss.menu"  before="-">
+                <action method="setTemplate" ifconfig="gloss/menu/left">
+                    <template>den_gloss/menu.phtml</template> 
+                </action>
+                <block type="gloss/tags" name="gloss_tags" />
+            </block>
+        </reference>
+        <reference name="top.links">
+            <block type="gloss/gloss" name="add.gloss.link">
+                <action method="addTopLink" ifconfig="gloss/menu/top"></action>
+                <block type="gloss/tags" name="gloss_tags" />
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>den_gloss/css/style.css</name></action>
+        </reference>
+    </default>
+
+    <gloss_index_index>
+        <reference name="footer" >
+              <block type="gloss/gloss" name="copyright.gloss.footer" template="den_gloss/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="gloss/gloss" name="gloss" template="den_gloss/gloss.phtml"/>
+        </reference>
+    </gloss_index_index>
+    
+    <gloss_index_list>
+        <reference name="footer" >
+              <block type="gloss/gloss" name="copyright.gloss.footer" template="den_gloss/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="gloss/gloss" name="gloss" template="den_gloss/gloss.phtml"/>
+        </reference>
+    </gloss_index_list>    
+    <gloss_post_view>
+        <reference name="footer" >
+              <block type="gloss/gloss" name="copyright.gloss.footer" template="den_gloss/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="gloss/post" name="post" template="den_gloss/post.phtml" />
+        </reference>
+    </gloss_post_view>
+    <gloss_cat_view>
+        <reference name="footer" >
+              <block type="gloss/gloss" name="copyright.gloss.footer" template="den_gloss/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="gloss/cat" name="cat" template="den_gloss/cat.phtml" />
+        </reference>
+    </gloss_cat_view>
+    
+    <gloss_rss_index>
+        <reference name="footer" >
+              <block type="gloss/gloss" name="copyright.gloss.footer" template="den_gloss/copyright.phtml"/>
+        </reference>
+        <block type="gloss/rss" output="toHtml" name="rss.gloss.new"/>
+    </gloss_rss_index>
+</layout> 

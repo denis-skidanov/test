@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2004-2007 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="footer_links">
+            <block type="job/job" name="add.job.footer">
+                <block type="job/tags" name="job_tags" />
+                <action method="addFooterLink" ifconfig="job/menu/footer"></action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="job/job" name="right.job.menu" before="-">
+                <action method="setTemplate" ifconfig="job/menu/right" ifvalue="1">
+                    <template>den_job/menu.phtml</template> 
+                </action>
+                <block type="job/tags" name="job_tags" />
+            </block>
+        </reference>
+        <reference name="left">
+            <block type="job/job" name="left.job.menu"  before="-">
+                <action method="setTemplate" ifconfig="job/menu/left">
+                    <template>den_job/menu.phtml</template> 
+                </action>
+                <block type="job/tags" name="job_tags" />
+            </block>
+        </reference>
+        <reference name="top.links">
+            <block type="job/job" name="add.job.link">
+                <action method="addTopLink" ifconfig="job/menu/top"></action>
+                <block type="job/tags" name="job_tags" />
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>den_job/css/style.css</name></action>
+        </reference>
+    </default>
+
+    <job_index_index>
+        <reference name="footer" >
+              <block type="job/job" name="copyright.job.footer" template="den_job/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="job/job" name="job" template="den_job/job.phtml"/>
+        </reference>
+    </job_index_index>
+    
+    <job_index_list>
+        <reference name="footer" >
+              <block type="job/job" name="copyright.job.footer" template="den_job/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="job/job" name="job" template="den_job/job.phtml"/>
+        </reference>
+    </job_index_list>    
+    <job_post_view>
+        <reference name="footer" >
+              <block type="job/job" name="copyright.job.footer" template="den_job/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="job/post" name="post" template="den_job/post.phtml" />
+        </reference>
+    </job_post_view>
+    <job_cat_view>
+        <reference name="footer" >
+              <block type="job/job" name="copyright.job.footer" template="den_job/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="job/cat" name="cat" template="den_job/cat.phtml" />
+        </reference>
+    </job_cat_view>
+    
+    <job_rss_index>
+        <reference name="footer" >
+              <block type="job/job" name="copyright.job.footer" template="den_job/copyright.phtml"/>
+        </reference>
+        <block type="job/rss" output="toHtml" name="rss.job.new"/>
+    </job_rss_index>
+</layout> 

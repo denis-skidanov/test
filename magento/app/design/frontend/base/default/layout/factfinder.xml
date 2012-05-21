@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Flagbit_FactFinder
+ *
+ * @category  Mage
+ * @package   Flagbit_FactFinder
+ * @copyright Copyright (c) 2010 Flagbit GmbH & Co. KG (http://www.flagbit.de/)
+ */
+
+/**
+ * Module Layout Config
+ * 
+ * @category  Mage
+ * @package   Flagbit_FactFinder
+ * @copyright Copyright (c) 2010 Flagbit GmbH & Co. KG (http://www.flagbit.de/)
+ * @author    Joerg Weller <weller@flagbit.de>
+ * @version   $Id$
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="top.search">
+            <action method="setTemplate"><template>factfinder/form.mini.phtml</template></action>
+        </reference>
+    </default>
+    
+    <factfinder_suggest_enabled>
+        <reference name="head">
+            <action method="addJs"><script>factfinder/jXHR.js</script></action>
+            <action method="addJs"><script>factfinder/suggest.js</script></action>
+        </reference>
+    </factfinder_suggest_enabled>
+    
+    <catalogsearch_result_index>      
+        <reference name="content">
+            <block type="factfinder/campaign_feedback" before="search.result" name="factfinder.campaign.feedback" template="factfinder/campaign/feedback.phtml">
+                <action method="setTextNumber"><number>1</number></action>
+            </block>
+            <block type="core/template" name="factfinder.logo" template="factfinder/logo.phtml"/>
+        </reference>
+    </catalogsearch_result_index>    
+    
+    <factfinder_clicktracking_enabled>
+        <reference name="head">
+            <action method="addJs"><script>factfinder/scic.js</script></action>
+        </reference>
+        <reference name="content">
+            <block type="factfinder/scic" name="factfinder.scic" template="factfinder/scic.phtml"/>
+        </reference>
+    </factfinder_clicktracking_enabled>
+</layout>

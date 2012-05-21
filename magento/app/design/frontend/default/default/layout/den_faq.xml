@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2004-2007 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="footer_links">
+            <block type="faq/faq" name="add.faq.footer">
+                <block type="faq/tags" name="faq_tags" />
+                <action method="addFooterLink" ifconfig="faq/menu/footer"></action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="faq/faq" name="right.faq.menu" before="-">
+                <action method="setTemplate" ifconfig="faq/menu/right" ifvalue="1">
+                    <template>den_faq/menu.phtml</template> 
+                </action>
+                <block type="faq/tags" name="faq_tags" />
+            </block>
+        </reference>
+        <reference name="left">
+            <block type="faq/faq" name="left.faq.menu"  before="-">
+                <action method="setTemplate" ifconfig="faq/menu/left">
+                    <template>den_faq/menu.phtml</template> 
+                </action>
+                <block type="faq/tags" name="faq_tags" />
+            </block>
+        </reference>
+        <reference name="top.links">
+            <block type="faq/faq" name="add.faq.link">
+                <action method="addTopLink" ifconfig="faq/menu/top"></action>
+                <block type="faq/tags" name="faq_tags" />
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>den_faq/css/style.css</name></action>
+        </reference>
+    </default>
+
+    <faq_index_index>
+        <reference name="footer" >
+              <block type="faq/faq" name="copyright.faq.footer" template="den_faq/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="faq/faq" name="faq" template="den_faq/faq.phtml"/>
+        </reference>
+    </faq_index_index>
+    
+    <faq_index_list>
+        <reference name="footer" >
+              <block type="faq/faq" name="copyright.faq.footer" template="den_faq/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="faq/faq" name="faq" template="den_faq/faq.phtml"/>
+        </reference>
+    </faq_index_list>    
+    <faq_post_view>
+        <reference name="footer" >
+              <block type="faq/faq" name="copyright.faq.footer" template="den_faq/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="faq/post" name="post" template="den_faq/post.phtml" />
+        </reference>
+    </faq_post_view>
+    <faq_cat_view>
+        <reference name="footer" >
+              <block type="faq/faq" name="copyright.faq.footer" template="den_faq/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="faq/cat" name="cat" template="den_faq/cat.phtml" />
+        </reference>
+    </faq_cat_view>
+    
+    <faq_rss_index>
+        <reference name="footer" >
+              <block type="faq/faq" name="copyright.faq.footer" template="den_faq/copyright.phtml"/>
+        </reference>
+        <block type="faq/rss" output="toHtml" name="rss.faq.new"/>
+    </faq_rss_index>
+</layout> 

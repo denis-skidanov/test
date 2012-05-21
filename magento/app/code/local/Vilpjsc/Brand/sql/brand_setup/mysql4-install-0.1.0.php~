@@ -1,0 +1,52 @@
+<?php
+$installer = $this;
+
+$installer->startSetup();
+
+$installer->run("
+
+ DROP TABLE IF EXISTS {$this->getTable('brand')};
+
+CREATE TABLE {$this->getTable('brand')} (
+
+  `brand_id` int(11) unsigned NOT NULL auto_increment,
+
+  `manufacturer_option_id` int(11) NOT NULL default '0',
+
+  `title` varchar(255) NOT NULL default '',
+
+  `filename` varchar(255) NOT NULL default '',
+
+  `content` text NOT NULL default '',
+
+  `status` smallint(6) NOT NULL default '0',
+
+  PRIMARY KEY (`brand_id`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    ");
+/*$attributeInfo = Mage::getResourceModel('eav/entity_attribute_collection')
+->setCodeFilter('manufacturer')
+->getFirstItem();
+
+$collectionTable = $attributeInfo->getSource();
+
+$collection = Mage::getResourceModel('eav/entity_attribute_option_collection')
+->setPositionOrder('asc')
+->setAttributeFilter($collectionTable->getAttribute()->getId())
+->setStoreFilter($collectionTable->getAttribute()->getStoreId())
+->load();
+foreach($collection as $item){
+	$model = Mage::getModel('brand/brand');
+	$b = $item->getOptionId();
+	$model->setTitle($item->getValue());
+	$model->setStatus(0);
+	$model->setContent("Logo of ".$item->getValue());
+	$model->setFilename("");
+	$model->setManufacturerOptionId($b);
+	try {
+		$model->save();
+	} catch (Exception $e) {
+	}
+}*/
+$installer->endSetup();

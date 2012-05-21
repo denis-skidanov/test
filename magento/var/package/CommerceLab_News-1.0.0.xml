@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package>
+    <name>CommerceLab_News</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This &lt;strong&gt;free Magento News Module&lt;/strong&gt; allows you to deploy full-fledged news on your site. In addition, you can create categories, add comments to each news item, add pictures to news and much more. This &lt;strong&gt;Magento News Extension&lt;/strong&gt; truelly has no rivals! Moreover, it can be used as a &lt;strong&gt;Blog&lt;/strong&gt;! Hurry to obtain this free module!</summary>
+    <description>&lt;p&gt;&lt;strong&gt;Magento News Extension&lt;/strong&gt; will help you make your store more interactive and will keep your visitors abreast of the latest business updates, developments and achievements.  The opportunity to comment on the news, as well as integration with social networks like Google+, Facebook and Twitter adds yet more value to this &lt;strong&gt;News Magento Extension&lt;/strong&gt;. With its help you can learn the opinion of your customers in more details and let your clients popularise the store by sharing info with their friends.&lt;/p&gt;&#xD;
+&lt;br /&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;News Magento Extension Key Features&lt;/strong&gt;:&lt;/p&gt;&#xD;
+&lt;br /&gt;&#xD;
+&lt;ul class="ul-list"&gt;&#xD;
+&lt;li&gt;Create news categories&lt;/li&gt;&#xD;
+&lt;li&gt;Bind each category to a particular store&lt;/li&gt;&#xD;
+&lt;li&gt;Structural separation of news for a short and full description&lt;/li&gt;&#xD;
+&lt;li&gt;Set a period of news publication (Publish From: Date, Hours, and Minutes; Publish until: Date, Hours and Minutes) &lt;/li&gt;&#xD;
+&lt;li&gt;Set data on publishing (date/time/category)&lt;/li&gt;&#xD;
+&lt;li&gt;Add photos for each news article &#x2013; both to the short and full description&lt;/li&gt;&#xD;
+&lt;li&gt;Set META-data for the news (keywords, description)&lt;/li&gt;&#xD;
+&lt;li&gt;Leave comments on the news page&lt;/li&gt;&#xD;
+&lt;li&gt;Set access parameters to leave comments&lt;/li&gt;&#xD;
+&lt;li&gt;The option of approving/blocking comments&lt;/li&gt;&#xD;
+&lt;li&gt;Ajax pager for easy switching between comments&lt;/li&gt;&#xD;
+&lt;li&gt;Integration with social networks: Google+, Facebook, Twitter and LinkedIn&lt;/li&gt;&#xD;
+&lt;li&gt;Print version for every news for easy opportunity to print it out&lt;/li&gt;&#xD;
+&lt;li&gt;RSS-feed for each news category&lt;/li&gt;&#xD;
+&lt;li&gt;Usage of Magento WYSYWIG-editor for simple news editing&lt;/li&gt;&#xD;
+&lt;li&gt;Easy installation&lt;/li&gt;&#xD;
+&lt;li&gt;Open source&lt;/li&gt;&#xD;
+&lt;li&gt;Compatibility with the latest versions of Magento.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;br /&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;CommerceLab &#x2013; stay open for the world!&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;br /&gt;</description>
+    <notes>Version number: 1.0&#xD;
+Stability: Stable&#xD;
+Compatibility: 1.4, 1.5, 1.6, 1.7</notes>
+    <authors><author><name>CommerceLab</name><user>auto-converted</user><email>support@commerce-lab.com</email></author></authors>
+    <date>2012-03-19</date>
+    <time>21:43:15</time>
+    <contents><target name="mage"><dir name="app"><dir name="code"><dir name="community"><dir name="CommerceLab"><dir name="News"><dir name="Block"><dir name="Adminhtml"><dir name="Category"><dir name="Edit"><file name="Form.php" hash="67fbb8494a34d12be38c71d733609a52"/></dir><file name="Edit.php" hash="9360ec5d3aa88fe9dde9f37bd5ed0a80"/><file name="Grid.php" hash="1089d2079e4101a57db30d792013ffc5"/></dir><dir name="Comment"><dir name="Edit"><file name="Form.php" hash="a2f1dd1d22665c5a067a3e42700c701a"/></dir><file name="Edit.php" hash="8de5a9f3de068243fbe0c4eddd58a715"/><file name="Grid.php" hash="6d1dfb07e013e864ead53f3ab1574806"/></dir><dir name="News"><dir name="Edit"><dir name="Tab"><file name="Additional.php" hash="5b0ab5180c2c6192f7a0e6c9a566c09d"/><file name="Info.php" hash="c2e91c7a505ee6ede52ef8ad52b4181c"/></dir><file name="Form.php" hash="9f087b81e9d08db22a719b70c8b504ba"/><file name="Tabs.php" hash="7cfa29c9c00b9e26a9114aef3f3a95e1"/></dir><file name="Edit.php" hash="b509c5c33e895f23d56ff19f085a6b02"/><file name="Grid.php" hash="ad878513ff6b5e1569c62488afa53921"/></dir><file name="Category.php" hash="79b3dde6b9fa76ae62213b7d6e2724b7"/><file name="Comment.php" hash="8be4d51b79855f471d28ebb8efa893cc"/><file name="News.php" hash="ebff7860ffe79041ace0badd257548fa"/></dir><file name="News.php" hash="788dca4c24c60863a289602247e694e1"/><file name="Newsitem.php" hash="263e8591eabbfdf226cb111784eaea54"/><file name="Rss.php" hash="8011e243acfd1f2407ad69f271205315"/></dir><dir name="Controller"><file name="Router.php" hash="9defad284f4ba8ae6adbc1d1479fdb02"/></dir><dir name="Helper"><file name="Data.php" hash="3198da62d7486894b1dfbb0a8cc529c0"/><file name="Versions.php" hash="47847c5ebcbb4afff5db50af3c358df5"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Category"><file name="Collection.php" hash="bcd541e130b269eaa7c881998a1e1ec2"/></dir><dir name="Comment"><file name="Collection.php" hash="0a0735a6169c5b39d8d54a67c2bf181c"/></dir><dir name="News"><file name="Collection.php" hash="3a8d6de820d75ce0caca6319b8b7c780"/></dir><file name="Category.php" hash="09487b65a95b3f26924f3362b5dfc32e"/><file name="Comment.php" hash="50cd3b7a8a7b451723d6038fe0f402d3"/><file name="News.php" hash="7d4c3d7ba217fbe82f3b8c94ead8f9ec"/></dir><dir name="Wysiwyg"><file name="Config.php" hash="44527a7977ce854719b845dc37912548"/></dir><file name="Category.php" hash="e3d279a026d1613ecbd7d5a3b1b5f879"/><file name="Check.php" hash="8a48d77b591b6234f23a34d1cb02e2a3"/><file name="Comment.php" hash="e6ca88fe0a7ba12be87cc8b8ea8467ed"/><file name="News.php" hash="98c8bdfc76f61485437a9da60418395c"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="CategoryController.php" hash="55a5ce77722a8c066348063d2bd7bf8a"/><file name="CommentController.php" hash="bec1545e94875f64582f298ef8de977c"/><file name="NewsController.php" hash="b33e1983da1d98f9d2220403e9fa5fde"/></dir><file name="IndexController.php" hash="a942095b635f345c7d91079d8cc92d75"/><file name="NewsitemController.php" hash="2ad107ffbcfff9f2655784f08195e457"/><file name="RssController.php" hash="53eeaf7b1f992ad4e018fa54cf08044a"/></dir><dir name="etc"><file name="config.xml" hash="4a3cff563130a38bd3dbd7a24a55f8ec"/><file name="system.xml" hash="fc91c1a9c57d8c37fef767e6e60300ca"/></dir><dir name="sql"><dir name="clnews_setup"><file name="mysql4-install-1.0.0.php" hash="59f4d1576540ee5d98b7030ac32d0b3a"/></dir></dir></dir></dir></dir></dir><dir name="design"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="clnews.xml" hash="c862118dff765ac146aaa5aaebf396da"/></dir><dir name="template"><dir name="clnews"><file name="latest.phtml" hash="c469069d2d68a260fa95adf4b2dc0c92"/><file name="list.phtml" hash="a676fdf8b7c4dfb777022b2694b14fc5"/><file name="menu.phtml" hash="ce181349e797b49232237ac74c36b047"/><file name="news_print.phtml" hash="2805e2d08a368e74bfdbb234b92950f0"/><file name="newsitem.phtml" hash="e81cc946ebad9a70e068fb4300af0e96"/></dir></dir></dir></dir></dir></dir><dir name="etc"><dir name="modules"><file name="CommerceLab_News.xml" hash="8da22cde4606bb3f8a30d40c4dbda6ee"/></dir></dir></dir><dir name="js"><dir name="commercelab"><file name="noconflict.js" hash="8b266e71830972f1999c5af5638b5ff2"/></dir><dir name="jquery"><file name="jquery-1.4.4.js" hash="1e2ef16563c5939f247626c6147045aa"/><file name="jquery-1.7.1-min.js" hash="de56dbfca517764d9d056e82068f8d39"/></dir></dir><dir name="skin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="css"><dir name="clnews"><dir name="images"><file name="i-tags.gif" hash="d8acce70b98a2c5827ba8bd6ee166d6d"/><file name="i_attached.gif" hash="4e277173b6372b1a90b0f19e0388ad54"/><file name="i_print.gif" hash="0aed138181495642e9ab29e55d194d40"/><file name="rss.gif" hash="d17678b5dab15949ed62bea2b602090f"/></dir><file name="style.css" hash="02684062443683d8310010a2b73d1c92"/></dir><file name="print.css" hash="45381611ef35e150daaff426b3f04020"/></dir><dir name="images"><dir name="clnews"><file name="ajax-loader.gif" hash="7b9776076d5fceef4993b55c9383dedd"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2004-2007 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="footer_links">
+            <block type="staff/staff" name="add.staff.footer">
+                <block type="staff/tags" name="staff_tags" />
+                <action method="addFooterLink" ifconfig="staff/menu/footer"></action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="staff/staff" name="right.staff.menu" before="-">
+                <action method="setTemplate" ifconfig="staff/menu/right" ifvalue="1">
+                    <template>den_staff/menu.phtml</template> 
+                </action>
+                <block type="staff/tags" name="staff_tags" />
+            </block>
+        </reference>
+        <reference name="left">
+            <block type="staff/staff" name="left.staff.menu"  before="-">
+                <action method="setTemplate" ifconfig="staff/menu/left">
+                    <template>den_staff/menu.phtml</template> 
+                </action>
+                <block type="staff/tags" name="staff_tags" />
+            </block>
+        </reference>
+        <reference name="top.links">
+            <block type="staff/staff" name="add.staff.link">
+                <action method="addTopLink" ifconfig="staff/menu/top"></action>
+                <block type="staff/tags" name="staff_tags" />
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>den_staff/css/style.css</name></action>
+        </reference>
+    </default>
+
+    <staff_index_index>
+        <reference name="footer" >
+              <block type="staff/staff" name="copyright.staff.footer" template="den_staff/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="staff/staff" name="staff" template="den_staff/staff.phtml"/>
+        </reference>
+    </staff_index_index>
+    
+    <staff_index_list>
+        <reference name="footer" >
+              <block type="staff/staff" name="copyright.staff.footer" template="den_staff/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="staff/staff" name="staff" template="den_staff/staff.phtml"/>
+        </reference>
+    </staff_index_list>    
+    <staff_post_view>
+        <reference name="footer" >
+              <block type="staff/staff" name="copyright.staff.footer" template="den_staff/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="staff/post" name="post" template="den_staff/post.phtml" />
+        </reference>
+    </staff_post_view>
+    <staff_cat_view>
+        <reference name="footer" >
+              <block type="staff/staff" name="copyright.staff.footer" template="den_staff/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="staff/cat" name="cat" template="den_staff/cat.phtml" />
+        </reference>
+    </staff_cat_view>
+    
+    <staff_rss_index>
+        <reference name="footer" >
+              <block type="staff/staff" name="copyright.staff.footer" template="den_staff/copyright.phtml"/>
+        </reference>
+        <block type="staff/rss" output="toHtml" name="rss.staff.new"/>
+    </staff_rss_index>
+</layout> 

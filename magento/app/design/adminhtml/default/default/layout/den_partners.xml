@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><name>den_partners/css/style.css</name></action>
+		</reference>
+	</default>
+    <partners_admin_manage_partners_index>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="partners/manage_partners" name="partners" />
+        </reference>
+    </partners_admin_manage_partners_index>
+    <partners_admin_manage_partners_edit>
+   	    <update handle="editor" />
+	</partners_admin_manage_partners_edit>	
+    <partners_admin_manage_partners_new>
+   	    <update handle="editor" />
+	</partners_admin_manage_partners_new>		
+	<partners_admin_manage_comment_index>
+        <reference name="content">
+            <block type="partners/manage_comment" name="comment" />
+        </reference>
+    </partners_admin_manage_comment_index>
+	<partners_admin_manage_cat_index>
+        <reference name="content">
+            <block type="partners/manage_cat" name="cat" />
+        </reference>
+    </partners_admin_manage_cat_index>
+</layout>

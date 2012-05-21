@@ -1,0 +1,8 @@
+a:4:{i:0;s:45:"Module "Mana_Db" requires module "Mana_Core".";i:1;s:681:"#0 /var/www/magento/app/code/core/Mage/Core/Model/Config.php(849): Mage::throwException('Module "Mana_Db...')
+#1 /var/www/magento/app/code/core/Mage/Core/Model/Config.php(812): Mage_Core_Model_Config->_sortModuleDepends(Array)
+#2 /var/www/magento/app/code/core/Mage/Core/Model/Config.php(315): Mage_Core_Model_Config->_loadDeclaredModules()
+#3 /var/www/magento/app/code/core/Mage/Core/Model/App.php(409): Mage_Core_Model_Config->loadModules()
+#4 /var/www/magento/app/code/core/Mage/Core/Model/App.php(338): Mage_Core_Model_App->_initModules()
+#5 /var/www/magento/app/Mage.php(640): Mage_Core_Model_App->run(Array)
+#6 /var/www/magento/index.php(80): Mage::run('', 'store')
+#7 {main}";s:3:"url";s:15:"/magento/test-1";s:11:"script_name";s:18:"/magento/index.php";}

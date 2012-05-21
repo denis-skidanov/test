@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2004-2007 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="footer_links">
+            <block type="partners/partners" name="add.partners.footer">
+                <block type="partners/tags" name="partners_tags" />
+                <action method="addFooterLink" ifconfig="partners/menu/footer"></action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="partners/partners" name="right.partners.menu" before="-">
+                <action method="setTemplate" ifconfig="partners/menu/right" ifvalue="1">
+                    <template>den_partners/menu.phtml</template> 
+                </action>
+                <block type="partners/tags" name="partners_tags" />
+            </block>
+        </reference>
+  
+        <reference name="left">
+            <block type="partners/partners" name="left.partners.menu"  before="-">
+                <action method="setTemplate" ifconfig="partners/menu/left">
+                    <template>den_partners/menu.phtml</template> 
+                </action>
+                <block type="partners/tags" name="partners_tags" />
+            </block>
+        </reference>
+        <reference name="top.links">
+            <block type="partners/partners" name="add.partners.link">
+                <action method="addTopLink" ifconfig="partners/menu/top"></action>
+                <block type="partners/tags" name="partners_tags" />
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>den_partners/css/style.css</name></action>
+        </reference>
+    </default>
+
+    <partners_index_index>
+        <reference name="footer" >
+              <block type="partners/partners" name="copyright.partners.footer" template="den_partners/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="partners/partners" name="partners" template="den_partners/partners.phtml"/>
+        </reference>
+	<reference name="left">
+            <block type="partners/menu" name="partners" template="den_partners/partners.phtml"/>
+        </reference>
+    </partners_index_index>
+    
+    <partners_index_list>
+        <reference name="footer" >
+              <block type="partners/partners" name="copyright.partners.footer" template="den_partners/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="partners/partners" name="partners" template="den_partners/partners.phtml"/>
+        </reference>
+    </partners_index_list>    
+    <partners_post_view>
+        <reference name="footer" >
+              <block type="partners/partners" name="copyright.partners.footer" template="den_partners/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="partners/post" name="post" template="den_partners/post.phtml" />
+        </reference>
+    </partners_post_view>
+    <partners_cat_view>
+        <reference name="footer" >
+              <block type="partners/partners" name="copyright.partners.footer" template="den_partners/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="partners/cat" name="cat" template="den_partners/cat.phtml" />
+        </reference>
+    </partners_cat_view>
+    
+    <partners_rss_index>
+        <reference name="footer" >
+              <block type="partners/partners" name="copyright.partners.footer" template="den_partners/copyright.phtml"/>
+        </reference>
+        <block type="partners/rss" output="toHtml" name="rss.partners.new"/>
+    </partners_rss_index>
+</layout> 

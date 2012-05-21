@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><name>den_faq/css/style.css</name></action>
+		</reference>
+	</default>
+    <faq_admin_manage_faq_index>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="faq/manage_faq" name="faq" />
+        </reference>
+    </faq_admin_manage_faq_index>
+    <faq_admin_manage_faq_edit>
+   	    <update handle="editor" />
+	</faq_admin_manage_faq_edit>	
+    <faq_admin_manage_faq_new>
+   	    <update handle="editor" />
+	</faq_admin_manage_faq_new>		
+	<faq_admin_manage_comment_index>
+        <reference name="content">
+            <block type="faq/manage_comment" name="comment" />
+        </reference>
+    </faq_admin_manage_comment_index>
+	<faq_admin_manage_cat_index>
+        <reference name="content">
+            <block type="faq/manage_cat" name="cat" />
+        </reference>
+    </faq_admin_manage_cat_index>
+</layout>

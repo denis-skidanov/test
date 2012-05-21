@@ -1,0 +1,16 @@
+<?if(Mage::getStoreConfig('staff/staff/userte')):?>
+<script src="<?php echo $this->getSkinUrl('') ?>den_staff/js/tiny_mce/tiny_mce.js"></script>
+<script src="<?php echo $this->getSkinUrl('') ?>den_staff/js/init_rte.js"></script>
+
+<script>
+	// Init rte
+	Den_jobIntId = setInterval(
+		function(){
+			if(typeof tinyMCE != 'undefined' && $('anchor-content')){
+				initRTE();
+				clearInterval(Den_jobIntId);
+			}
+		}
+	,500)
+</script>
+<?endif;?>

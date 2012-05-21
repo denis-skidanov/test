@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Karigar_Priceranges>
+            <version>0.1.0</version>
+        </Karigar_Priceranges>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <priceranges>
+                    <file>priceranges.xml</file>
+                </priceranges>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <models>
+            <priceranges>
+                <class>Karigar_Priceranges_Model</class>
+            </priceranges>
+            
+            <catalog>
+                <rewrite>
+                    <layer_filter_price>Karigar_Priceranges_Model_Layer_Filter_Price</layer_filter_price>
+                </rewrite>
+            </catalog>
+            <catalog_resource>
+                <rewrite>
+                    <layer_filter_price>Karigar_Priceranges_Model_Resource_Layer_Filter_Price</layer_filter_price>
+                </rewrite>
+            </catalog_resource>
+        </models>
+        <helpers>
+            <priceranges>
+                <class>Karigar_Priceranges_Helper</class>
+            </priceranges>
+        </helpers>   
+        <blocks>
+            <priceranges>
+                <class>Karigar_Priceranges_Block</class>
+            </priceranges>
+            
+            <catalog>
+                <rewrite>
+                    <layer_filter_price>Karigar_Priceranges_Block_Layer_Filter_Price</layer_filter_price>
+                </rewrite>
+            </catalog>
+        </blocks>
+    </global> 
+   
+
+</config> 

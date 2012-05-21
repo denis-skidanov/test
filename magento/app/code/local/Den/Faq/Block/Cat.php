@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/LICENSE-L.txt
+ *
+ * @category   AW
+ * @package    Den_Faq
+ * @copyright  Copyright (c) 2009-2010 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/LICENSE-L.txt
+ */
+class Den_Faq_Block_Cat extends Den_Faq_Block_Abstract {
+     
+    public function getPosts() {
+        
+        $cats = Mage::getSingleton('faq/cat');
+       
+        if ($cats->getCatId() === NULL) {
+            return false;
+        } 
+        
+          $collection = parent::_prepareCollection(array('addCatFilter'=>$cats->getCatId()));            
+          parent::_processCollection($collection,$categoryMode = true);    
+         
+           return $collection;
+       
+    }
+  
+    public function getCat() {
+        $cats = Mage::getSingleton('faq/cat');
+        return $cats;
+    }
+
+    public function getPages() {
+        
+        echo parent::getPagesCollection('category',array('setCatId'=>$this->getCat()->getId()));
+        
+    }
+    
+
+    protected function _prepareLayout() {
+        
+        $post = $this->getCat();
+        
+        $route = Mage::helper('faq')->getRoute();
+
+        // show breadcrumbs
+        if (Mage::getStoreConfig('faq/faq/faqcrumbs') && ($breadcrumbs = $this->getLayout()->getBlock('breadcrumbs'))) {
+            $breadcrumbs->addCrumb('home', array('label' => Mage::helper('faq')->__('Home'), 'title' => Mage::helper('faq')->__('Go to Home Page'), 'link' => Mage::getBaseUrl()));
+            ;
+            $breadcrumbs->addCrumb('faq', array('label' => Mage::getStoreConfig('faq/faq/title'), 'title' => Mage::helper('faq')->__('Return to ' . Mage::getStoreConfig('faq/faq/title')), 'link' => Mage::getUrl($route)));
+            $breadcrumbs->addCrumb('faq_page', array('label' => $post->getTitle(), 'title' => $post->getTitle()));
+        }
+
+        if ($head = $this->getLayout()->getBlock('head')) {           
+            $head->setTitle($post->getTitle());
+            $head->setKeywords($post->getMetaKeywords());
+            $head->setDescription($post->getMetaDescription());
+        }
+    }
+    
+    
+    protected function _toHtml() {
+        return Mage::helper('faq')->filterWYS(parent::_toHtml());
+    }
+
+ 
+
+}

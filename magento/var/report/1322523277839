@@ -1,0 +1,9 @@
+a:5:{i:0;s:194:"Error in file: "/var/www/magento/app/code/local/Den/Job/sql/job_setup/mysql4-upgrade-0.1.0-0.2.5.php" - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'magento.tbl_blog' doesn't exist";i:1;s:894:"#0 /var/www/magento/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/magento/app/code/core/Mage/Core/Model/Resource/Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '0.1.0', '1.1')
+#2 /var/www/magento/app/code/core/Mage/Core/Model/Resource/Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('0.1.0', '1.1')
+#3 /var/www/magento/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 /var/www/magento/app/code/core/Mage/Core/Model/App.php(412): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 /var/www/magento/app/code/core/Mage/Core/Model/App.php(338): Mage_Core_Model_App->_initModules()
+#6 /var/www/magento/app/Mage.php(640): Mage_Core_Model_App->run(Array)
+#7 /var/www/magento/index.php(80): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:78:"/magento/index.php/admin/dashboard/index/key/e12aec79f27f2e76e6badfe4bc329902/";s:11:"script_name";s:18:"/magento/index.php";s:4:"skin";s:7:"default";}

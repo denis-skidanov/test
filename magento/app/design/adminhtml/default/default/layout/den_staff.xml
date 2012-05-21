@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><name>den_staff/css/style.css</name></action>
+		</reference>
+	</default>
+    <staff_admin_manage_staff_index>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="staff/manage_staff" name="staff" />
+        </reference>
+    </staff_admin_manage_staff_index>
+    <staff_admin_manage_staff_edit>
+   	    <update handle="editor" />
+	</staff_admin_manage_staff_edit>	
+    <staff_admin_manage_staff_new>
+   	    <update handle="editor" />
+	</staff_admin_manage_staff_new>		
+	<staff_admin_manage_comment_index>
+        <reference name="content">
+            <block type="staff/manage_comment" name="comment" />
+        </reference>
+    </staff_admin_manage_comment_index>
+	<staff_admin_manage_cat_index>
+        <reference name="content">
+            <block type="staff/manage_cat" name="cat" />
+        </reference>
+    </staff_admin_manage_cat_index>
+</layout>

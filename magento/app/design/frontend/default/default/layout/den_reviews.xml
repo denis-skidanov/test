@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2004-2007 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="footer_links">
+            <block type="reviews/reviews" name="add.reviews.footer">
+                <block type="reviews/tags" name="reviews_tags" />
+                <action method="addFooterLink" ifconfig="reviews/menu/footer"></action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="reviews/reviews" name="right.reviews.menu" before="-">
+                <action method="setTemplate" ifconfig="reviews/menu/right" ifvalue="1">
+                    <template>den_reviews/menu.phtml</template> 
+                </action>
+                <block type="reviews/tags" name="reviews_tags" />
+            </block>
+        </reference>
+        <reference name="left">
+            <block type="reviews/reviews" name="left.reviews.menu"  before="-">
+                <action method="setTemplate" ifconfig="reviews/menu/left">
+                    <template>den_reviews/menu.phtml</template> 
+                </action>
+                <block type="reviews/tags" name="reviews_tags" />
+            </block>
+        </reference>
+        <reference name="top.links">
+            <block type="reviews/reviews" name="add.reviews.link">
+                <action method="addTopLink" ifconfig="reviews/menu/top"></action>
+                <block type="reviews/tags" name="reviews_tags" />
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>den_reviews/css/style.css</name></action>
+        </reference>
+    </default>
+
+    <reviews_index_index>
+        <reference name="footer" >
+              <block type="reviews/reviews" name="copyright.reviews.footer" template="den_reviews/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="reviews/reviews" name="reviews" template="den_reviews/reviews.phtml"/>
+        </reference>
+    </reviews_index_index>
+    
+    <reviews_index_list>
+        <reference name="footer" >
+              <block type="reviews/reviews" name="copyright.reviews.footer" template="den_reviews/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="reviews/reviews" name="reviews" template="den_reviews/reviews.phtml"/>
+        </reference>
+    </reviews_index_list>    
+    <reviews_post_view>
+        <reference name="footer" >
+              <block type="reviews/reviews" name="copyright.reviews.footer" template="den_reviews/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="reviews/post" name="post" template="den_reviews/post.phtml" />
+        </reference>
+    </reviews_post_view>
+     <reviews_post_commentview>
+        <reference name="footer" >
+              <block type="reviews/reviews" name="copyright.reviews.footer" template="den_reviews/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="reviews/post" name="post" template="den_reviews/comment.phtml" />
+        </reference>
+    </reviews_post_commentview>
+    <reviews_cat_view>
+        <reference name="footer" >
+              <block type="reviews/reviews" name="copyright.reviews.footer" template="den_reviews/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="reviews/cat" name="cat" template="den_reviews/cat.phtml" />
+        </reference>
+    </reviews_cat_view>
+    
+    <reviews_rss_index>
+        <reference name="footer" >
+              <block type="reviews/reviews" name="copyright.reviews.footer" template="den_reviews/copyright.phtml"/>
+        </reference>
+        <block type="reviews/rss" output="toHtml" name="rss.reviews.new"/>
+    </reviews_rss_index>
+</layout> 

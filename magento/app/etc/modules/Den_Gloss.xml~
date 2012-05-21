@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Den_Job>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Den_Job>
+  </modules>
+</config>

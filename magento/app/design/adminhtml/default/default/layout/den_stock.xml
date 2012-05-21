@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><name>den_stock/css/style.css</name></action>
+		</reference>
+	</default>
+    <stock_admin_manage_stock_index>
+        <update handle="editor" />
+        <reference name="content">
+            <block type="stock/manage_stock" name="stock" />
+        </reference>
+    </stock_admin_manage_stock_index>
+    <stock_admin_manage_stock_edit>
+   	    <update handle="editor" />
+	</stock_admin_manage_stock_edit>	
+    <stock_admin_manage_stock_new>
+   	    <update handle="editor" />
+	</stock_admin_manage_stock_new>		
+	<stock_admin_manage_comment_index>
+        <reference name="content">
+            <block type="stock/manage_comment" name="comment" />
+        </reference>
+    </stock_admin_manage_comment_index>
+	<stock_admin_manage_cat_index>
+        <reference name="content">
+            <block type="stock/manage_cat" name="cat" />
+        </reference>
+    </stock_admin_manage_cat_index>
+</layout>

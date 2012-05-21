@@ -1,0 +1,26 @@
+
+<div><h1 class="filter">a</h1><h1 class="filter">h</h1></div>
+<?php $posts = $this->getPosts(); ?>
+<?php foreach ($posts as $post): ?>
+<div class="postWrapper">
+    <div class="postTitle">
+        <h2><?php echo $post->getTitle();?></h2>
+      
+    </div>
+    <div class="postContent"><?php echo $post->getPostContent(); ?></div>
+    
+    <?php echo $this->getBookmarkHtml($post) ?>
+    <div class="tags"><?php echo $this->getTagsHtml($post) ?></div>
+   
+</div>
+<?php endforeach; ?> 
+<?php $this->getPages(); ?>
+<script language="javascript">
+$j(document).ready(function(){
+	$j('.filter').click(function(){
+		alert('work')
+    
+
+	})
+});
+</script>

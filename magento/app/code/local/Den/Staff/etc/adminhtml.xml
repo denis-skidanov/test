@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<translate>
+		<modules>
+			<Den_Staff>
+				<files>
+					<default>Den_Staff.csv</default>
+				</files>
+			</Den_Staff>
+		</modules>
+	</translate>
+
+	<menu>
+		<staff module="staff">
+			<title>Staff</title>
+			<sort_order>71</sort_order>
+			<children>
+				<new module="staff">
+					<title>Add Post</title>
+					<sort_order>0</sort_order>
+					<action>staff_admin/manage_staff/new</action>
+				</new>
+				<posts module="staff">
+					<title>Posts</title>
+					<sort_order>10</sort_order>
+					<action>staff_admin/manage_staff/index</action>
+				</posts>
+				<comment module="staff">
+					<title>Comments</title>
+					<sort_order>20</sort_order>
+					<action>staff_admin/manage_comment</action>
+				</comment>
+				<cat module="staff">
+					<title>Categories</title>
+					<sort_order>30</sort_order>
+					<action>staff_admin/manage_cat</action>
+				</cat>
+				<settings translate="title" module="staff">
+					<title>Settings</title>
+					<action>adminhtml/system_config/edit/section/staff</action>
+					<sort_order>40</sort_order>
+				</settings>
+			</children>
+		</staff>
+	</menu>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+					<staff>
+						<title>Staff</title>
+						<sort_order>70</sort_order>
+						<children>
+							<posts>
+								<title>Manage Posts</title>
+								<sort_order>0</sort_order>
+							</posts>
+							<comment>
+								<title>Manage Comments</title>
+								<sort_order>1</sort_order>
+							</comment>
+							<cat>
+								<title>Manage Categories</title>
+								<sort_order>2</sort_order>
+							</cat>
+						</children>
+					</staff>
+					<system>
+						<children>
+							<config>
+								<children>
+									<staff>
+										<title>aheadWorks Staff Section</title>
+									</staff>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+	<layout>
+		<updates>
+			<staff>
+				<file>aw_staff.xml</file>
+			</staff>
+		</updates>
+	</layout>
+</config>

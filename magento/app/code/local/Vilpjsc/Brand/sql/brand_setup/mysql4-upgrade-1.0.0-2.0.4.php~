@@ -1,0 +1,9 @@
+<?php
+$installer = $this;
+
+$installer->startSetup();
+
+$installer->run("
+ DROP TABLE IF EXISTS {$this->getTable('brand')};
+ALTER TABLE `{$this->getTable('brand')}`, DROP COLUMN `filename` ;");
+$installer->endSetup();

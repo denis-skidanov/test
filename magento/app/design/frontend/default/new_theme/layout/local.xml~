@@ -1,0 +1,18 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+ 
+    <layout>
+        <default>
+       
+            <!— Убираем выноски и редко используемые вещи -->
+            <remove name="right.poll"/>
+            <remove name="right.permanent.callout"/>
+            <remove name="left.permanent.callout"/>
+            <remove name="paypal.partner.right.logo"/>
+     
+            <!— добавляем локальную таблицу стилей -->
+            <reference name="head">
+                <action method="addCss"><stylesheet>css/local.css</stylesheet>
+                </action>
+            </reference>
+        </default>
+    </layout>

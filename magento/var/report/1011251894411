@@ -1,0 +1,9 @@
+a:5:{i:0;s:352:"Error in file: "/var/www/magento/app/code/local/Snowcore/Blogs/sql/blogs_setup/mysql4-install-0.1.0.php" - SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '– DROP TABLE IF EXISTS tbl_blogs_articles' at line 1";i:1;s:884:"#0 /var/www/magento/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/magento/app/code/core/Mage/Core/Model/Resource/Setup.php(421): Mage_Core_Model_Resource_Setup->_modifyResourceDb('install', '', '0.1.0')
+#2 /var/www/magento/app/code/core/Mage/Core/Model/Resource/Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('0.1.0')
+#3 /var/www/magento/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 /var/www/magento/app/code/core/Mage/Core/Model/App.php(412): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 /var/www/magento/app/code/core/Mage/Core/Model/App.php(338): Mage_Core_Model_App->_initModules()
+#6 /var/www/magento/app/Mage.php(640): Mage_Core_Model_App->run(Array)
+#7 /var/www/magento/index.php(80): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:74:"/magento/index.php/admin/cache/index/key/db82c4d5232b42fbeb6ad679e62bb8fb/";s:11:"script_name";s:18:"/magento/index.php";s:4:"skin";s:7:"default";}

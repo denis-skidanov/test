@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>Luxe_Bestsellers</name>
+    <version>0.1.7</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Magento Bestsellers module.</summary>
+    <description>Magento Bestsellers  module automatically generates the list of your online store's best selling
+products and displays it at the home page in the customer area.</description>
+    <notes>Added ability to specify most of parameters Added "Display for last ... days" configuration parameters dynamically</notes>
+    <authors><author><name>varyous</name><user>auto-converted</user><email>admin@luxe-soft.com</email></author></authors>
+    <date>2008-11-19</date>
+    <time>21:32:41</time>
+    <contents><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="luxe"><dir name="bestsellers"><dir name="list"><file name="toolbar.phtml" hash="0bc5b6f8dc4f7d231d5e0870c491abba"/></dir></dir></dir></dir></dir></dir></dir></target><target name="magelocal"><dir name="Luxe"><dir name="Bestsellers"><dir name="Block"><dir name="List"><file name="Toolbar.php" hash="f12f9e11c166f706e7e049138cee0f05"/></dir><file name="List.php" hash="346ab0afe6280d4eed38a907bcdc9140"/></dir><dir name="etc"><file name="config.xml" hash="6f10b3ffef3e7ad3fef0f729f9bd243b"/><file name="system.xml" hash="dba1e45eec21a5ead897f05e1bc18bde"/></dir><dir name="Helper"><file name="Data.php" hash="e64df9bcdeb88fba8ba88268e5da2307"/></dir><dir name="Model"><dir name="Config"><dir name="Source"><file name="ListMode.php" hash="775c983da115a61ffaf45de06cdfb3a2"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Luxe_Bestsellers.xml" hash="28397e2fd29471759db62c0188c08da4"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

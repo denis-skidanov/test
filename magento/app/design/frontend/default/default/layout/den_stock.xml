@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2004-2007 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="footer_links">
+            <block type="stock/stock" name="add.stock.footer">
+                <block type="stock/tags" name="stock_tags" />
+                <action method="addFooterLink" ifconfig="stock/menu/footer"></action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="stock/stock" name="right.stock.menu" before="-">
+                <action method="setTemplate" ifconfig="stock/menu/right" ifvalue="1">
+                    <template>den_stock/menu.phtml</template> 
+                </action>
+                <block type="stock/tags" name="stock_tags" />
+            </block>
+        </reference>
+        <reference name="left">
+            <block type="stock/stock" name="left.stock.menu"  before="-">
+                <action method="setTemplate" ifconfig="stock/menu/left">
+                    <template>den_stock/menu.phtml</template> 
+                </action>
+                <block type="stock/tags" name="stock_tags" />
+            </block>
+        </reference>
+        <reference name="top.links">
+            <block type="stock/stock" name="add.stock.link">
+                <action method="addTopLink" ifconfig="stock/menu/top"></action>
+                <block type="stock/tags" name="stock_tags" />
+            </block>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>den_stock/css/style.css</name></action>
+        </reference>
+    </default>
+
+    <stock_index_index>
+        <reference name="footer" >
+              <block type="stock/stock" name="copyright.stock.footer" template="den_stock/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="stock/stock" name="stock" template="den_stock/stock.phtml"/>
+        </reference>
+    </stock_index_index>
+    
+    <stock_index_list>
+        <reference name="footer" >
+              <block type="stock/stock" name="copyright.stock.footer" template="den_stock/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="stock/stock" name="stock" template="den_stock/stock.phtml"/>
+        </reference>
+    </stock_index_list>    
+    <stock_post_view>
+        <reference name="footer" >
+              <block type="stock/stock" name="copyright.stock.footer" template="den_stock/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="stock/post" name="post" template="den_stock/post.phtml" />
+        </reference>
+    </stock_post_view>
+    <stock_cat_view>
+        <reference name="footer" >
+              <block type="stock/stock" name="copyright.stock.footer" template="den_stock/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="stock/cat" name="cat" template="den_stock/cat.phtml" />
+        </reference>
+    </stock_cat_view>
+    
+    <stock_rss_index>
+        <reference name="footer" >
+              <block type="stock/stock" name="copyright.stock.footer" template="den_stock/copyright.phtml"/>
+        </reference>
+        <block type="stock/rss" output="toHtml" name="rss.stock.new"/>
+    </stock_rss_index>
+</layout> 

@@ -1,0 +1,17 @@
+<?php
+$installer = $this;
+
+$installer->startSetup();
+
+$installer->run("
+
+ DROP TABLE IF EXISTS {$this->getTable('brand_category')};
+
+CREATE TABLE {$this->getTable('brand_category')} (
+  `entity_id` int(10) NOT NULL,
+  `brand_id` int(11) NOT NULL,
+  `brand_category_id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`brand_category_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+    ");
+$installer->endSetup();
